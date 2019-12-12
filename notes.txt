@@ -1,0 +1,45 @@
+setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+Prevent the function set with the setTimeout() to execute:
+
+
+String concatenation:
+`request_type=get_goals&gameId= ${processDataOfGame(re)[0].gameId}`)
+
+.reduce()
+Just like .map(), .reduce() also runs a callback for each element of an array.
+ What’s different here is that reduce passes the result of this callback (the accumulator)
+ from one array element to the other.
+
+
+// this will log Listener 1,  MT 1,  Listener 2,  MT 2
+ const button = document.getElementById("button");
+button.addEventListener("click", () => {
+  Promise.resolve().then(() => console.log('MT 1'));
+  console.log('Listener 1');
+});
+
+button.addEventListener("click", () => {
+  Promise.resolve().then(() => console.log('MT 2'));
+  console.log('Listener 2');
+});
+
+
+
+// Listener 1, Listener 2, MT 1, MT 2
+// user click ,
+JS stack,
+MiscroStack,
+LOG
+
+const button = document.getElementById("button");
+button.addEventListener("click", () => {
+ Promise.resolve().then(() => console.log('MT 1'));
+ console.log('Listener 1');
+});
+
+button.addEventListener("click", () => {
+ Promise.resolve().then(() => console.log('MT 2'));
+ console.log('Listener 2');
+});
+button.click();
+https://d6vdma9166ldh.cloudfront.net/media/images/1527571606396-task%20queue.jpeg
